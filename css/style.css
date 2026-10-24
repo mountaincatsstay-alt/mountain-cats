@@ -96,7 +96,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .card dl { display: grid; grid-template-columns: 4em 1fr; font-size: 14px; margin-top: 10px; row-gap: 4px; }
 .card dt { color: var(--deep); }
 .card__msg { border-top: 1px dashed var(--line); margin: 0 26px; padding: 16px 0 22px; font-size: 14px; }
-.rules { margin-top: 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.rules { margin-top: 36px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .rules div { background: var(--white); border-radius: 12px; padding: 20px 22px; font-size: 14px; }
 .rules b { font-family: "Kiwi Maru", serif; font-weight: 500; font-size: 17px; display: block; color: var(--deep); }
 
