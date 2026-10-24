@@ -153,6 +153,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .end__lead { font-family: "Kiwi Maru", serif; font-size: 26px; }
 .end .note { margin-top: 4px; }
 .end .btn { margin-top: 20px; }
+.line-cta { margin-top: 40px; padding-top: 28px; border-top: 1px dashed var(--line); font-size: 14px; color: var(--muted); }
+.line-cta[hidden] { display: none; }
+.end .btn--line { margin-top: 12px; background: #06c755; padding: 10px 26px; font-size: 14px; }
+.end .btn--line:hover { background: #05a647; }
 
 /* ---------- フッター ---------- */
 .footer {
@@ -161,6 +165,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
 }
 .footer__links { display: flex; gap: 24px; font-size: 14px; }
+.footer__links a[hidden] { display: none; }
 .footer__links a:hover { color: var(--deep); }
 .footer small { color: var(--muted); }
 .sticky-cta { display: none; }
@@ -218,9 +223,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .nav.is-open { display: flex; }
   .nav a { padding: 14px var(--gutter); border-top: 1px solid var(--line); }
 
-  .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 8px; }
-  .hero__img { height: 420px; }
-  .hero h1 { font-size: 30px; }
+  /* 最初の画面でキャッチコピーと説明文まで見えるよう、写真の高さを画面に合わせる */
+  .hero { grid-template-columns: 1fr; gap: 16px; padding-top: 8px; }
+  .hero__img { height: clamp(200px, calc(100vh - 480px), 360px); height: clamp(200px, calc(100svh - 480px), 360px); border-radius: 140px 140px 12px 12px; }
+  .hero__img img { object-position: center 30%; }
+  .hero h1 { font-size: 26px; line-height: 1.45; margin-top: 10px; }
+  .hero__text p { margin-top: 10px; font-size: 15px; line-height: 1.8; }
+  .hero__text .btn { margin-top: 20px; }
 
   .facts { grid-template-columns: 1fr 1fr; }
 

@@ -3,6 +3,14 @@ document.querySelectorAll(".js-airbnb").forEach((a) => {
   a.href = AIRBNB_URL;
 });
 
+// 公式LINEのURLが入っていれば、LINEのボタンを表示する
+if (LINE_URL) {
+  document.querySelectorAll(".js-line").forEach((el) => {
+    (el.matches("a") ? el : el.querySelector("a")).href = LINE_URL;
+    el.hidden = false;
+  });
+}
+
 // スマホのメニュー
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
