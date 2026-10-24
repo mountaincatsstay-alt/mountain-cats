@@ -1,0 +1,258 @@
+:root {
+  --bg: #fdf8ee;
+  --ink: #3a332b;
+  --muted: #80776b;
+  --mustard: #d9a441;
+  --deep: #7a5a2b;
+  --deep-dark: #634821;
+  --line: #ecdfc6;
+  --white: #fff;
+  --max: 1080px;
+  --gutter: 32px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body {
+  font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  font-size: 15px;
+  line-height: 1.95;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; text-align: inherit; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* ---------- ボタン ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  background: var(--deep); color: #fff; font-weight: 500;
+  padding: 14px 32px; border-radius: 999px; transition: background .2s;
+}
+.btn:hover { background: var(--deep-dark); }
+.btn--sm { padding: 8px 18px; font-size: 14px; }
+.btn--block { display: flex; width: 100%; }
+.btn--ghost { background: transparent; color: var(--ink); border: 2px solid var(--ink); padding: 10px 26px; }
+.btn--ghost:hover { background: var(--white); }
+.ext { font-size: .9em; }
+
+/* ---------- ヘッダー ---------- */
+.header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(253, 248, 238, .95); backdrop-filter: blur(8px);
+}
+.header__inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter);
+  height: 76px; display: flex; align-items: center; gap: 28px;
+}
+.logo { font-family: "Kiwi Maru", serif; font-weight: 500; font-size: 22px; white-space: nowrap; }
+.nav { display: flex; gap: 24px; margin-left: auto; font-size: 14px; color: var(--muted); }
+.nav a:hover { color: var(--deep); }
+.menu-btn { display: none; }
+
+/* ---------- メイン写真 ---------- */
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; padding-top: 24px; }
+.hero__img { height: 600px; border-radius: 200px 200px 12px 12px; overflow: hidden; }
+.hero__img img { object-position: center 55%; }
+.badge { display: inline-block; background: var(--mustard); color: #fff; font-size: 13px; padding: 2px 14px; border-radius: 999px; }
+.hero h1 { font-family: "Kiwi Maru", serif; font-weight: 500; font-size: 44px; line-height: 1.5; margin-top: 16px; }
+.hero__text p { margin-top: 16px; font-size: 16px; }
+.hero__text .btn { margin-top: 28px; }
+.hero__text small { display: block; color: var(--muted); font-size: 12px; margin-top: 8px; }
+
+/* ---------- 基本情報 ---------- */
+.facts {
+  list-style: none; margin-top: 56px;
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  background: var(--white); border-radius: 12px;
+}
+.facts li { padding: 16px; text-align: center; font-size: 13px; color: var(--muted); line-height: 1.6; }
+.facts b { display: block; font-family: "Kiwi Maru", serif; font-size: 19px; color: var(--ink); font-weight: 500; }
+
+/* ---------- セクション共通 ---------- */
+.section { margin-top: 110px; }
+.sec-head { text-align: center; margin-bottom: 40px; }
+.sec-head small { color: var(--deep); font-size: 13px; letter-spacing: .15em; }
+.sec-head h2 { font-family: "Kiwi Maru", serif; font-weight: 500; font-size: 32px; line-height: 1.4; }
+.note { font-size: 13px; color: var(--muted); margin-top: 12px; }
+
+/* ---------- 猫スタッフ ---------- */
+.staff { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.card { background: var(--white); border-radius: 14px; border: 2px solid var(--ink); overflow: hidden; position: relative; }
+/* 名札のストラップ穴 */
+.card::before {
+  content: ""; position: absolute; top: 12px; left: 50%; width: 56px; height: 10px; margin-left: -28px;
+  border-radius: 6px; background: var(--bg); border: 2px solid var(--ink);
+}
+.card__top { background: var(--mustard); color: #fff; text-align: center; padding: 34px 0 10px; font-size: 13px; letter-spacing: .3em; }
+.card__in { display: grid; grid-template-columns: 170px 1fr; gap: 24px; padding: 26px; }
+.card__ph { height: 200px; border-radius: 8px; overflow: hidden; }
+.card__ph img { object-position: center 20%; }
+.card h3 { font-family: "Kiwi Maru", serif; font-size: 34px; font-weight: 500; line-height: 1.2; }
+.card h3 small { font-size: 14px; color: var(--muted); margin-left: 6px; }
+.card dl { display: grid; grid-template-columns: 4em 1fr; font-size: 14px; margin-top: 10px; row-gap: 4px; }
+.card dt { color: var(--deep); }
+.card__msg { border-top: 1px dashed var(--line); margin: 0 26px; padding: 16px 0 22px; font-size: 14px; }
+.rules { margin-top: 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.rules div { background: var(--white); border-radius: 12px; padding: 20px 22px; font-size: 14px; }
+.rules b { font-family: "Kiwi Maru", serif; font-weight: 500; font-size: 17px; display: block; color: var(--deep); }
+
+/* ---------- お部屋の写真 ---------- */
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.gallery__item { display: block; }
+.gallery__item .ph { display: block; position: relative; height: 200px; border-radius: 12px; overflow: hidden; }
+.gallery__item img { transition: transform .4s; }
+.gallery__item:hover img { transform: scale(1.04); }
+.gallery__item--main { grid-column: span 2; grid-row: span 2; }
+.gallery__item--main .ph { height: 442px; }
+.gallery__item .cap { display: block; font-size: 13px; color: var(--muted); margin-top: 6px; }
+.gallery__more {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  background: rgba(58, 51, 43, .5); color: #fff; font-size: 22px; font-weight: 700;
+}
+.gallery__all { margin-top: 20px; }
+
+/* ---------- 設備 ---------- */
+.amenities { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.amenities li { background: var(--white); border-radius: 999px; padding: 6px 16px; font-size: 14px; }
+.amenities li.hl { background: var(--mustard); color: #fff; }
+
+/* ---------- 山あそび ---------- */
+.mountain {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+  background: var(--white); border-radius: 16px; overflow: hidden;
+}
+.mountain__img { height: 380px; }
+.mountain__body { padding-right: 40px; }
+.mountain h3 { font-family: "Kiwi Maru", serif; font-weight: 500; font-size: 26px; margin-bottom: 8px; }
+.mountain h4 { color: var(--deep); font-size: 14px; margin-top: 14px; }
+
+/* ---------- アクセス ---------- */
+.access { display: grid; grid-template-columns: 1.2fr 1fr; gap: 36px; }
+.map { width: 100%; height: 320px; border: 0; border-radius: 14px; }
+.access__info { display: grid; grid-template-columns: 8em 1fr; row-gap: 6px; }
+.access__info dt { color: var(--muted); }
+.map-link { display: inline-block; margin-top: 12px; color: var(--deep); font-weight: 700; text-decoration: underline; }
+
+/* ---------- よくある質問 ---------- */
+.faq { max-width: 760px; margin: 0 auto; }
+.faq details { background: var(--white); border-radius: 12px; margin-bottom: 10px; }
+.faq summary {
+  list-style: none; cursor: pointer; padding: 14px 52px 14px 22px; font-weight: 700; position: relative;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 22px; top: 12px; font-size: 22px; line-height: 1.4; color: var(--deep); }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { padding: 0 22px 16px; color: #5f574c; font-size: 14px; }
+
+/* ---------- 予約への案内 ---------- */
+.end { margin-top: 110px; text-align: center; }
+.end__ph { width: 220px; height: 220px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px; }
+.end__ph img { object-position: center 60%; }
+.end__lead { font-family: "Kiwi Maru", serif; font-size: 26px; }
+.end .note { margin-top: 4px; }
+.end .btn { margin-top: 20px; }
+
+/* ---------- フッター ---------- */
+.footer {
+  margin-top: 80px; border-top: 1px solid var(--line);
+  padding: 28px max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter)));
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.footer__links { display: flex; gap: 24px; font-size: 14px; }
+.footer__links a:hover { color: var(--deep); }
+.footer small { color: var(--muted); }
+.sticky-cta { display: none; }
+
+/* ---------- 写真の拡大表示 ---------- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,.92);
+  display: flex; align-items: center; justify-content: center; gap: 16px; padding: 24px;
+}
+.lightbox[hidden] { display: none; }
+.lightbox figure { max-width: min(1100px, 100%); text-align: center; }
+.lightbox img { width: auto; height: auto; max-width: 100%; max-height: 80vh; object-fit: contain; margin: 0 auto; border-radius: 6px; }
+.lightbox figcaption { color: #ddd; margin-top: 12px; font-size: 14px; }
+.lightbox__close { position: absolute; top: 12px; right: 20px; color: #fff; font-size: 36px; line-height: 1; }
+.lightbox__nav {
+  color: #fff; font-size: 40px; width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(255,255,255,.12); flex-shrink: 0; line-height: 1; text-align: center;
+}
+.lightbox__nav:hover { background: rgba(255,255,255,.25); }
+
+/* ================= タブレット ================= */
+@media (max-width: 900px) {
+  .hero { gap: 32px; }
+  .hero__img { height: 480px; }
+  .hero h1 { font-size: 34px; }
+  .card__in { grid-template-columns: 120px 1fr; gap: 16px; padding: 20px; }
+  .card__ph { height: 150px; }
+  .card h3 { font-size: 28px; }
+  .access { grid-template-columns: 1fr; }
+}
+
+/* ================= スマートフォン ================= */
+@media (max-width: 720px) {
+  :root { --gutter: 18px; }
+  .header__inner { height: 60px; gap: 12px; }
+  .logo { font-size: 19px; }
+  .header .btn--sm { display: none; }
+  .menu-btn {
+    display: block; margin-left: auto; width: 40px; height: 40px; position: relative;
+  }
+  .menu-btn span, .menu-btn span::before, .menu-btn span::after {
+    position: absolute; left: 9px; width: 22px; height: 2px; background: var(--ink); content: ""; transition: .2s;
+  }
+  .menu-btn span { top: 19px; }
+  .menu-btn span::before { left: 0; top: -7px; }
+  .menu-btn span::after { left: 0; top: 7px; }
+  .menu-btn[aria-expanded="true"] span { background: transparent; }
+  .menu-btn[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+  .menu-btn[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+  .nav {
+    display: none; position: absolute; top: 60px; left: 0; right: 0;
+    background: var(--bg); flex-direction: column; gap: 0; border-bottom: 1px solid var(--line); color: var(--ink);
+  }
+  .nav.is-open { display: flex; }
+  .nav a { padding: 14px var(--gutter); border-top: 1px solid var(--line); }
+
+  .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 8px; }
+  .hero__img { height: 420px; }
+  .hero h1 { font-size: 30px; }
+
+  .facts { grid-template-columns: 1fr 1fr; }
+  .facts li:last-child { grid-column: span 2; }
+
+  .section { margin-top: 72px; }
+  .sec-head { margin-bottom: 28px; }
+  .sec-head h2 { font-size: 25px; }
+  .staff, .rules, .mountain { grid-template-columns: 1fr; }
+  .staff { gap: 28px; }
+  .rules { gap: 12px; }
+
+  .gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .gallery__item .ph { height: 130px; }
+  .gallery__item--main { grid-row: auto; }
+  .gallery__item--main .ph { height: 240px; }
+  .gallery__all { width: 100%; }
+
+  .mountain { gap: 20px; }
+  .mountain__img { height: 240px; }
+  .mountain__body { padding: 0 20px 24px; }
+
+  .end__lead { font-size: 21px; }
+  .footer { flex-direction: column; text-align: center; padding-bottom: 100px; }
+
+  .sticky-cta {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
+    background: rgba(253, 248, 238, .96); border-top: 1px solid var(--line);
+  }
+  .lightbox { padding: 12px; gap: 0; }
+  .lightbox__nav { position: absolute; bottom: 24px; }
+  .lightbox__prev { left: calc(50% - 64px); }
+  .lightbox__next { right: calc(50% - 64px); }
+}
