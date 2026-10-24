@@ -66,7 +66,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* ---------- 基本情報 ---------- */
 .facts {
   list-style: none; margin-top: 56px;
-  display: grid; grid-template-columns: repeat(5, 1fr);
+  display: grid; grid-template-columns: repeat(6, 1fr);
   background: var(--white); border-radius: 12px;
 }
 .facts li { padding: 16px; text-align: center; font-size: 13px; color: var(--muted); line-height: 1.6; }
@@ -118,8 +118,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* ---------- 設備 ---------- */
 .amenities { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .amenities li { background: var(--white); border-radius: 999px; padding: 6px 16px; font-size: 14px; }
-.amenities li.hl { background: var(--mustard); color: #fff; }
-
 /* ---------- 山あそび ---------- */
 .mountain {
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
@@ -188,6 +186,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .hero { gap: 32px; }
   .hero__img { height: 480px; }
   .hero h1 { font-size: 34px; }
+  .facts { grid-template-columns: repeat(3, 1fr); }
   .card__in { grid-template-columns: 120px 1fr; gap: 16px; padding: 20px; }
   .card__ph { height: 150px; }
   .card h3 { font-size: 28px; }
@@ -224,7 +223,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .hero h1 { font-size: 30px; }
 
   .facts { grid-template-columns: 1fr 1fr; }
-  .facts li:last-child { grid-column: span 2; }
 
   .section { margin-top: 72px; }
   .sec-head { margin-bottom: 28px; }
