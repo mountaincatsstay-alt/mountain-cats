@@ -6,4 +6,4 @@ const AIRBNB_URL = "https://www.airbnb.jp/rooms/1741606825681751848";
 
 // 公式LINEの友だち追加URL（管理画面の「友だち追加ガイド」で発行される https://lin.ee/〜 ）
 // 空のあいだは、サイトにLINEのボタンは表示されません。
-const LINE_URL = "";
+const LINE_URL = "https://lin.ee/nMBUnyu";
