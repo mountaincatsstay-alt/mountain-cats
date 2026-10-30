@@ -23,6 +23,7 @@ body {
 }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 a { color: inherit; text-decoration: none; }
+[hidden] { display: none !important; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; text-align: inherit; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 
@@ -155,8 +156,25 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .end .btn { margin-top: 20px; }
 .line-cta { margin-top: 40px; padding-top: 28px; border-top: 1px dashed var(--line); font-size: 14px; color: var(--muted); }
 .line-cta[hidden] { display: none; }
-.end .btn--line { margin-top: 12px; background: #06c755; padding: 10px 26px; font-size: 14px; }
-.end .btn--line:hover { background: #05a647; }
+.btn--line { background: #06c755; }
+.btn--line:hover { background: #05a647; }
+.end .btn--line { margin-top: 12px; padding: 10px 26px; font-size: 14px; }
+
+/* ---------- LINEでお問い合わせ ---------- */
+.hero-line { display: inline-block; margin-top: 10px; color: #05a647; font-size: 14px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.hero-line:hover { color: #048a3b; }
+.contact {
+  max-width: 760px; margin: 0 auto; background: var(--white); border: 2px solid #06c755;
+  border-radius: 16px; padding: 36px 40px; text-align: center;
+}
+.contact__lead { font-size: 15px; }
+.contact__steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0 28px; }
+.contact__steps li { background: var(--bg); border-radius: 12px; padding: 16px 10px; font-size: 14px; line-height: 1.6; }
+.contact__steps b {
+  display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; margin: 0 auto 8px;
+  border-radius: 50%; background: #06c755; color: #fff; font-size: 14px;
+}
+.contact__btn { padding: 14px 40px; font-size: 16px; }
 
 /* ---------- フッター ---------- */
 .footer {
@@ -253,8 +271,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .end__lead { font-size: 21px; }
   .footer { flex-direction: column; text-align: center; padding-bottom: 100px; }
 
+  .contact { padding: 26px 18px; }
+  .contact__lead br { display: none; }
+  .contact__steps { gap: 8px; margin: 20px 0 24px; }
+  .contact__steps li { padding: 12px 4px; font-size: 12px; }
+  .contact__btn { display: flex; width: 100%; }
+
+  .sticky-cta .btn--line { flex: none; padding: 12px 16px; font-size: 14px; }
   .sticky-cta {
-    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    display: flex; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
     padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
     background: rgba(253, 248, 238, .96); border-top: 1px solid var(--line);
   }

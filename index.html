@@ -42,6 +42,7 @@
       <a href="#amenities">設備</a>
       <a href="#access">アクセス</a>
       <a href="#faq">よくある質問</a>
+      <a class="js-line-show" href="#contact" hidden>お問い合わせ</a>
     </nav>
     <a class="btn btn--sm js-airbnb" href="https://www.airbnb.jp/rooms/1741606825681751848" target="_blank" rel="noopener">Airbnbで予約</a>
     <button class="menu-btn" id="menuBtn" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav"><span></span></button>
@@ -57,7 +58,8 @@
       <h1>ヒメとコロが<br>お出迎えする、<br>猫と山の民泊宿。</h1>
       <p>岩手県紫波町、日詰駅から歩いて5分。最大3名さままで。おひとりでも、おふたりでも、猫たちと気ままに過ごしてください。</p>
       <a class="btn js-airbnb" href="https://www.airbnb.jp/rooms/1741606825681751848" target="_blank" rel="noopener">Airbnbで空室を見る<span class="ext" aria-hidden="true">↗</span></a>
-      <small>予約・お支払い・メッセージはすべてAirbnbで承ります</small>
+      <small>予約・お支払いはAirbnbで承ります</small>
+      <a class="hero-line js-line" href="#" target="_blank" rel="noopener" hidden>予約前のご質問は、LINEでお気軽にどうぞ →</a>
     </div>
   </section>
 
@@ -202,15 +204,31 @@
     <div class="sec-head"><small>きかれること</small><h2>よくある質問</h2></div>
     <div class="faq">
       <details><summary>予約はどこからできますか？</summary><p>Airbnbから承っています。このページの「Airbnbで予約」ボタンから掲載ページへ移動できます。</p></details>
+      <details class="js-line-show" hidden><summary>予約の前に質問できますか？</summary><p>はい、公式LINEで予約前のご質問を受け付けています。このページの「LINEで質問する」ボタンから友だち追加して、トークでメッセージを送ってください。</p></details>
       <details><summary>猫には必ず会えますか？</summary><p>猫のペースで暮らしているので、いつも会えるとは限りません。</p></details>
       <details><summary>チェックインの方法は？</summary><p>基本は私たちが直接お迎えいたしますが、曜日によってはセルフチェックインをお願いしております。詳しい手順はご予約後にメッセージでお送りしますので、どうぞご安心くださいね。</p></details>
-      <details><summary>朝食はありますか？</summary><p>朝食付きでのご宿泊も可能です。詳しくはAirbnbのメッセージでお問い合わせください。</p></details>
+      <details><summary>朝食はありますか？</summary><p>朝食付きでのご宿泊も可能です。詳しくは公式LINEまたはAirbnbのメッセージでお問い合わせください。</p></details>
       <details><summary>猫におやつをあげてもいいですか？</summary><p>はい、おやつ（チュール）をあげることができます。</p></details>
       <details><summary>ペットを連れて行けますか？</summary><p>申し訳ありませんが、ペットはお連れいただけません。</p></details>
       <details><summary>喫煙はできますか？</summary><p>室内は全面禁煙とさせていただいております。お煙草を吸われる方は、2階ベランダ、1階ウッドデッキ、または中庭をご利用ください。</p></details>
       <details><summary>キャンセルについて</summary><p>Airbnbに掲載しているキャンセルポリシーに従います。</p></details>
       <details><summary>子ども連れでも泊まれますか？</summary><p>お子様連れも歓迎です。ベッドが2つあり、それに加えてお布団を敷くことができます。</p></details>
       <details><summary>ゴミはどうすればいいですか？</summary><p>「可燃ごみ」「缶・瓶」「ペットボトル」の分別にご協力をお願いいたします。</p></details>
+    </div>
+  </section>
+
+  <!-- ===== お問い合わせ（公式LINE） ===== -->
+  <section class="section js-line" id="contact" hidden>
+    <div class="sec-head"><small>予約前でもOK</small><h2>LINEでお問い合わせ</h2></div>
+    <div class="contact">
+      <p class="contact__lead">空き状況、朝食、アクセス、猫のことなど、<br>気になることはLINEでホストに直接きいてください。</p>
+      <ol class="contact__steps">
+        <li><b>1</b>下のボタンから<br>友だち追加</li>
+        <li><b>2</b>トークで<br>質問を送る</li>
+        <li><b>3</b>ホストが<br>お返事します</li>
+      </ol>
+      <a class="btn btn--line contact__btn" href="#" target="_blank" rel="noopener">LINEで質問する<span class="ext" aria-hidden="true">↗</span></a>
+      <p class="note">パソコンからはQRコードが表示されます。スマホのLINEで読み取ってください。</p>
     </div>
   </section>
 
@@ -221,7 +239,7 @@
     <p class="note">空き状況・料金・ご予約はAirbnbから</p>
     <a class="btn js-airbnb" href="https://www.airbnb.jp/rooms/1741606825681751848" target="_blank" rel="noopener">Airbnbで予約する<span class="ext" aria-hidden="true">↗</span></a>
     <div class="line-cta js-line" hidden>
-      <p>ヒメとコロの近況や、紫波の山の季節のお知らせをLINEでお届けしています。</p>
+      <p>ご質問はLINEでも受け付けています。ヒメとコロの近況や、紫波の山の季節のお知らせもお届けします。</p>
       <a class="btn btn--line" href="#" target="_blank" rel="noopener">LINEで友だち追加</a>
     </div>
   </section>
@@ -240,6 +258,7 @@
 <!-- スマホ用：画面下に固定の予約ボタン -->
 <div class="sticky-cta">
   <a class="btn btn--block js-airbnb" href="https://www.airbnb.jp/rooms/1741606825681751848" target="_blank" rel="noopener">Airbnbで空室を見る<span class="ext" aria-hidden="true">↗</span></a>
+  <a class="btn btn--line js-line" href="#" target="_blank" rel="noopener" hidden>LINEで質問</a>
 </div>
 
 <!-- 写真の拡大表示 -->

@@ -9,6 +9,10 @@ if (LINE_URL) {
     (el.matches("a") ? el : el.querySelector("a")).href = LINE_URL;
     el.hidden = false;
   });
+  // リンクを持たない、LINEがあるときだけ見せる要素（メニュー・よくある質問）
+  document.querySelectorAll(".js-line-show").forEach((el) => {
+    el.hidden = false;
+  });
 }
 
 // スマホのメニュー
