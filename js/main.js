@@ -15,6 +15,28 @@ if (LINE_URL) {
   });
 }
 
+// 「Airbnb」「LINE」ボタンのクリックをGA4に記録する
+// position には押された場所が入る
+//   header / footer / hero（最初の画面）/ end（最後の予約案内）/ sticky-cta（スマホ下の固定ボタン）/ 各セクションのid
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a");
+  if (!a || typeof gtag !== "function") return;
+  let name = null;
+  if (a.href === AIRBNB_URL) name = "airbnb_click";
+  else if (LINE_URL && a.href === LINE_URL) name = "line_click";
+  if (!name) return;
+  const place = a.closest("header, footer, section, .sticky-cta");
+  let position = "other";
+  if (place) {
+    const tag = place.tagName.toLowerCase();
+    position = tag === "header" || tag === "footer" ? tag : place.id || place.classList[0];
+  }
+  gtag("event", name, {
+    position,
+    link_text: a.textContent.replace("↗", "").trim(),
+  });
+});
+
 // スマホのメニュー
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
